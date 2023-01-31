@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+{% block head %}
+    {% include "head.html" %}
+{% endblock %}
+
+<body>
+    <nav class="navbar is-link">
+
+        <div class="hero-body">
+            <div class="container is-flex is-justify-content-space-between">
+
+                <figure class="image">
+                    <a class="navbar-item" href="{% url 'index' %}">
+                        <img src="{% static 'img/emprestimo-de-carro.png' %}">
+                    </a>
+                </figure>
+
+
+
+                    <div class="tabs is-boxed">
+                        <ul>
+                            <li><a href="{% url 'clientes' %}">Clientes</a></li>
+                            <li><a href="cadFuncionario.html">Funcionario</a></li>
+                            <li><a href="registros.html">Registros</a></li>
+                            <li><a href="estada.html">Estada</a></li>
+                        </ul>
+                    </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <section>
+        <div class="container is-flex ">
+            <div class="columns">
+                <div class="column">
+                    <figure class="image">
+                        <img src="{% static 'img/istockphoto-636444558-612x612.jpg' %}">
+                    </figure>
+                </div>
+
+                <div class="column">
+                    <div class="notification is-Grey lighter">
+
+                        Somos uma empresa de estacionamento especializada em fornecer soluções para o projeto,
+                        equipamentos e automação de estacionamentos.
+                        Nossa empresa de estacionamento é composta por uma talentosa equipe de desenvolvedores de
+                        software com vasta experiência em design de estacionamento.
+                        Entendemos que um parque de estacionamento é um investimento, pelo que nos focamos em maximizar
+                        e aproveitar de forma eficiente todos os espaços, transformando-os assim em oportunidades de
+                        negócio que aumentem a rentabilidade e a mais-valia do seu estacionamento.
+                        Implementamos soluções tecnológicas que não só criam negócios sustentáveis e escaláveis para si,
+                        como também nos permitem reforçar a experiência dos seus utilizadores e a marca da sua empresa.
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container pt-6">
+        <h1 class="title has-text-black"> Alguns de nossos Números:</h1>
+        <div class="level is-mobile">
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Clientes cadastrados</p>
+                    <p class="title">159</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Sedes</p>
+                    <p class="title">4</p>
+                </div>
+            </div>
+
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Avaliações</p>
+                    <p class="title">132</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="columns">
+        <div class="column is-two-fifths is-offset-one-quarter">
+
+            <div class="container pt-6">
+                <h1 class="title has-text-black"> Confira os horarios de Atendimento:</h1>
+
+                <table class="table is-fullwidth">
+                    <thead>
+                        <tr>
+
+                            <th><abbr title="class">Dias da Semana</abbr></th>
+                            <th><abbr title="class">Funionamento</abbr></th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Segunda a sexta</td>
+                            <td>8h até 21h</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>Sabado</td>
+                            <td>8h até 21h</td>
+
+                        </tr>
+                        <tr>
+                            <td>Domingo e Feriados</td>
+                            <td>10h até 17h</td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+{% block content %} {% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    {% if object_list %}
+        <section class="section has-background-link-light">
+            <div class="container">
+                <form id="formListaClientes" action="" method="GET">
+                    <input type="hidden" name="imprimir" id="imprimir" value="">
+                    <div class="field is-grouped is-flex is-align-items-center is-flex-wrap-wrap">
+                        <label class="label p-2 mt-2">Nome do cliente: </label>
+                        <div class="control is-expanded">
+                            <input class="input" type="text" name="buscar" value="{{ request.GET.buscar }}"
+                                   placeholder="Digite o nome do cliente">
+                        </div>
+                        <div class="control">
+                            <button type="button" class="button is-link" onclick="geraPdf('', 'formListaClientes');">
+                                Buscar
+                            </button>
+                        </div>
+
+                        <div class="control">
+                            <button type="button" class="button is-link" onclick="geraPdf('pdf', 'formListaClientes');">
+                                Imprimir
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div style="text-align: center;"><h1 class="subtitle is-size-4">Clientes Cadastrados</h1></div>
+                <div class="table">
+                    <table class="table is-table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                        <thead>
+                            <tr>
+                                <th class="has-text-centered">nome</th>
+                                <th class="has-text-centered">cpf</th>
+                                <th class="has-text-centered">cnpj</th>
+                                <th class="has-text-centered">endereco</th>
+                                <th class="has-text-centered">telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for cliente in object_list %}
+                                <tr>
+
+                                    <td> {{ cliente.nome }} </td>
+                                    <td> {{ cliente.cpf }} </td>
+                                    <td> {{ cliente.cnpj }} </td>
+                                    <td> {{ cliente.endereco }} </td>
+                                    <td> {{ cliente.telefone }} </td>
+                                    <td class="has-text-centered is-flex is-flex-wrap-nowrap is-justify-content-center">
+                                        <a href="{% url 'cliente_editar' cliente.pk %}">
+                                            <span class="icon">
+                                                <i class="fas fa-edit"></i>
+                                            </span>
+                                        </a>
+
+                                        <a href="{% url 'cliente_apagar' cliente.pk %}">
+                                            <span class="icon">
+                                                <i class="far fa-trash-alt"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
+

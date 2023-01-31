@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="fi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c68e1af131.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Listar Registro</title>
+</head>
+
+<body>
+
+    <nav class="navbar has-background-link">
+
+        
+        <div class="container is-flex is-justify-content-space-between">
+
+            <figure class="image">
+                <a href="#"><img src="img/emprestimo-de-carro.png"></a>
+            </figure>
+
+
+            
+                <div class="tabs is-boxed">
+                    <ul>
+                        <li><a href="cadCliente.html">Clientes</a></li>
+                        <li><a href="cadFuncionario.html">Funcionario</a></li>
+                        <li><a href="registros.html">Registros</a></li>
+                        <li><a href="estada.html">Estada</a></li>
+                    </ul>
+                </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+    <section class="section has-background-link-light">
+        <div class="container">
+
+            <form id="formListaClientes" action="" method="GET">
+                <input type="hidden" name="imprimir" id="imprimir" value="">
+                <div class="field is-grouped is-flex is-align-items-center is-flex-wrap-warp">
+                    <label class="label p-2 mt-2">
+
+                    </label>
+                    <div class="control is-expanded">
+                        <input class="input" type="text" name="buscar" value="" placeholder="Digite o nome do cliente">
+                    </div>
+
+
+                    <div class="control">
+                        <button type="button" class="button is-link">
+                            Bucar
+                        </button>
+                    </div>
+
+                    <div class="control">
+                        <button type="button" class="button is-link">
+                            Imprimir
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <table class="table is-fullwidth">
+
+            <thead>
+                <tr>
+
+                    <th><abbr title="class">Cliente</abbr></th>
+                    <th><abbr title="class">Placa do Veiculo</abbr></th>
+                    <th><abbr title="class">Cor do Veiculo</abbr></th>
+                    <th><abbr title="class"><Table>Tipo do Veiculo</Table></abbr></th>
+                    <th><abbr title="class">Modelo</abbr></th>
+                    
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Keids</td>
+                    <td>ABC-1884</td>
+                    <td>PRETO</td>
+                    <td>Moto</td>
+                    <td>MmmNInja</td>
+                   
+
+
+                </tr>
+
+                <tr>
+                    <td>Ricz</td>
+                    <td>DAF-1434</td>
+                    <td>Azul</td>
+                    <td>Van</td>
+                    <td>Mercedes</td>
+                    
+
+                </tr>
+                <tr>
+                    <td>Lucz</td>
+                    <td>FDS-1884</td>
+                    <td>PRETO</td>
+                    <td>carro</td>
+                    <td>Range Hover</td>
+                    
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    
+    </div>
+
+   
+
+
+
+    <footer class="footer is-flex has-background-link">
+        <div class="container has-text-centered">
+
+
+            <p>
+                <strong class="has-text-white">LAL Estacionamentos</strong>
+                <strong>@Desde 2022</strong>
+            </p>
+
+            <div class="icons pt-3">
+
+                <a href=""> <i class="fa-brands fa-whatsapp fa-2x has-text-white"></i></a>
+                <a href=""> <i class="fa-brands fa-facebook fa-2x has-text-white"></i></a>
+                <a href=""> <i class="fa-brands fa-instagram fa-2x has-text-white"></i></a>
+
+            </div>
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
